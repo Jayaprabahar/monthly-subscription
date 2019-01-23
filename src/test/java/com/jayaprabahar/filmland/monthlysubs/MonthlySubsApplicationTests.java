@@ -1,4 +1,4 @@
-package com.jayaprabahar.filmland;
+package com.jayaprabahar.filmland.monthlysubs;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
