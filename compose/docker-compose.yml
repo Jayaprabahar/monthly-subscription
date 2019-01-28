@@ -1,0 +1,8 @@
+monthlysubs:
+  image: <DOCKERHUB_IMAGE>
+  ports:
+  - '8080'
+  environment:
+  - JAVA_OPTS=-Xms512m -Xmx2048m -Djava.net.preferIPv4Stack=true -Djava.awt.headless=true
+  - ENV_NAME=live
+  - GELF_HOST/PROMOTHEUS_HOST=<>
