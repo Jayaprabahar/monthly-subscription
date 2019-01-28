@@ -10,7 +10,7 @@ import com.jayaprabahar.filmland.monthlysubs.beans.SubscribedServicesKey;
 /**
  * <p> Project : monthlysubs </p>
  * <p> Title : SubscribedServicesRepository.java </p>
- * <p> Description: </p>
+ * <p> Description: Repository interface for subscribed services per user </p>
  * <p> Created: Jan 22, 2019</p>
  * 
  * @version 1.0

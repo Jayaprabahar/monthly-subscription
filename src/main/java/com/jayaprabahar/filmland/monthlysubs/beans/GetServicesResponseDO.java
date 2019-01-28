@@ -11,10 +11,8 @@ import lombok.Data;
 /**
  * <p> Project : monthlysubs </p>
  * <p> Title : GetServicesResponseDO.java </p>
- * <p> Description: </p>
+ * <p> Description: Domain/Bean Object for get services response per user</p>
  * <p> Created: Jan 22, 2019</p>
- * <p> Copyright: KLM Royal Dutch Airlines. All Rights Reserved. (c) 2018 </p>
- * <p> Company: AIRFRANCE-KLM </p>
  * 
  * @version 1.0
  * @author <a href="mailto:jpofficial@gmail.com">Jayaprabahar</a>

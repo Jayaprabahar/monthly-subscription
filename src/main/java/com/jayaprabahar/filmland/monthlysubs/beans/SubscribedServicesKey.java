@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 /**
  * <p> Project : monthlysubs </p>
  * <p> Title : SubscribedServicesKey.java </p>
- * <p> Description: </p>
+ * <p> Description: Key for the SubscribedServicesDO entity</p>
  * <p> Created: Jan 22, 2019</p>
  * 
  * @version 1.0

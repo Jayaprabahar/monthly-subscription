@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 /**
  * <p> Project : monthlysubs </p>
  * <p> Title : AvailableServicesDO.java </p>
- * <p> Description: </p>
+ * <p> Description: Domain/Bean Object for available Services </p>
  * <p> Created: Jan 22, 2019</p>
  * 
  * @version 1.0

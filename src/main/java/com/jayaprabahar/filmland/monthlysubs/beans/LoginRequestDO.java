@@ -5,6 +5,8 @@ package com.jayaprabahar.filmland.monthlysubs.beans;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,7 +15,7 @@ import lombok.NoArgsConstructor;
 /**
  * <p> Project : monthlysubs </p>
  * <p> Title : LoginRequestDO.java </p>
- * <p> Description: </p>
+ * <p> Description: Login request domain object</p>
  * <p> Created: Jan 21, 2019</p>
  * 
  * @version 1.0
@@ -26,7 +28,10 @@ import lombok.NoArgsConstructor;
 @Entity
 public class LoginRequestDO {
 
-	private @Id String email;
+	@Id
+	@Email
+	private String email;
+	@NotBlank
 	private String password;
 
 }

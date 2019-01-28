@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.jayaprabahar.filmland.monthlysubs.repo;
+package com.jayaprabahar.filmland.monthlysubs.init;
 
 import java.time.LocalDate;
 
@@ -12,6 +12,9 @@ import org.springframework.context.annotation.Configuration;
 import com.jayaprabahar.filmland.monthlysubs.beans.AvailableServicesDO;
 import com.jayaprabahar.filmland.monthlysubs.beans.LoginRequestDO;
 import com.jayaprabahar.filmland.monthlysubs.beans.SubscribedServicesDO;
+import com.jayaprabahar.filmland.monthlysubs.repo.AuthenticationServicesRepository;
+import com.jayaprabahar.filmland.monthlysubs.repo.AvailableServicesRepository;
+import com.jayaprabahar.filmland.monthlysubs.repo.SubscribedServicesRepository;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -30,13 +33,14 @@ import lombok.extern.slf4j.Slf4j;
 public class DumpData {
 
 	@Bean
-	CommandLineRunner loadLoginData(LoginRepository loginRepository) {
+	CommandLineRunner loadLoginData(AuthenticationServicesRepository authenticationServicesRepository) {
 		return args -> {
-			log.info("Preloading " + loginRepository.save(new LoginRequestDO("java@sogeti.com", "Javaiscool90")));
-			log.info("Preloading " + loginRepository.save(new LoginRequestDO("jpofficial@gmail.com", "JPlovesJava")));
+			// encrypt password using BCryptPasswordEncoder.
+			log.info("Preloading " + authenticationServicesRepository.save(new LoginRequestDO("java@sogeti.com", "Javaiscool90")));
+			log.info("Preloading " + authenticationServicesRepository.save(new LoginRequestDO("jpofficial@gmail.com", "JPlovesJava")));
 		};
 	}
-	
+
 	@Bean
 	CommandLineRunner loadAvaiableServicesData(AvailableServicesRepository availableServicesRepository) {
 		return args -> {
@@ -44,7 +48,7 @@ public class DumpData {
 			log.info("Preloading " + availableServicesRepository.save(new AvailableServicesDO("Netherlandse Series", 20, 6.0)));
 		};
 	}
-	
+
 	@Bean
 	CommandLineRunner loadSubscribedServicesData(SubscribedServicesRepository subscribedServicesRepository) {
 		return args -> {
