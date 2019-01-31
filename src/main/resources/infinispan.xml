@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<infinispan xmlns="urn:infinispan:config:9.4">
+	<cache-container>
+		<jmx domain="infinispan.embedded.example" />
+
+		<local-cache-configuration name="local-template">
+			<expiration interval="10000" lifespan="1200000" max-idle="600000"/>
+		</local-cache-configuration>
+
+		<local-cache name="filmlandCache" statistics="true" configuration="local-template" />
+	</cache-container>
+</infinispan>
