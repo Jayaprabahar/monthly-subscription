@@ -9,8 +9,6 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.quartz.SchedulerException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -55,9 +53,9 @@ public class ServicesController {
 
 	@GetMapping("/{email}")
 	@ResponseBody
-	private GetServicesResponseDO getSubscribedServices(@PathVariable String email, HttpServletRequest request) {
+	private GetServicesResponseDO getSubscribedServices(@PathVariable String email) {
 		log.info("getSubscribedServices");
-		
+
 		List<AvailableServicesDO> availableServicesDOs = availableServicesRepository.findAll();
 		List<SubscribedServicesDO> subscribedServicesDOs = subscribedServicesRepository.findAllByServicesKey_Email(email);
 
