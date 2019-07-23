@@ -35,7 +35,6 @@ public class PaymentNotificationJob extends QuartzJobBean {
 	 * 
 	 */
 	private void sendPaymentNotification() {
-		// TODO Auto-generated method stub
-
+		// Add notification code here
 	}
 }
